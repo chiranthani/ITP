@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select userID, fullname, gender, dob, address, regDate, email, contactNum, parentName, parentOC, p_WorkingPlace, courseCode, NIC, w_Telephone from student ;]]>
+	</queryString>
+	<field name="userID" class="java.lang.Integer"/>
+	<field name="fullname" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="dob" class="java.sql.Date"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="regDate" class="java.sql.Date"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="contactNum" class="java.lang.Integer"/>
+	<field name="parentName" class="java.lang.String"/>
+	<field name="parentOC" class="java.lang.String"/>
+	<field name="p_WorkingPlace" class="java.lang.String"/>
+	<field name="courseCode" class="java.lang.String"/>
+	<field name="NIC" class="java.lang.String"/>
+	<field name="w_Telephone" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="18" y="4" width="362" height="75"/>
+				<imageExpression><![CDATA["C:\\Users\\jahrin\\Documents\\NetBeansProjects\\IMS Progress V 6\\web\\IMG\\CaptureNew.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="403" y="19" width="302" height="47"/>
+				<textElement>
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[Student Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="2" width="61" height="20"/>
+				<textElement/>
+				<text><![CDATA[userID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="68" y="2" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[fullname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="2" width="75" height="20"/>
+				<textElement/>
+				<text><![CDATA[gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="537" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[contactNum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="642" y="2" width="87" height="20"/>
+				<textElement/>
+				<text><![CDATA[NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="731" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[regDate]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="1" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{userID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="1" width="135" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fullname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="0" width="75" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="293" y="1" width="136" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="1" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="535" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{contactNum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="638" y="0" width="88" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="727" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{regDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="36" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="679" y="12" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="759" y="12" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MMM-yy">
+				<reportElement x="573" y="13" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

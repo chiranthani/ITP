@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select c.courseName,c.courseCode,s.subName,s.subCode
+from course c, subject s,student st
+group by c.courseCode,s.subCode]]>
+	</queryString>
+	<field name="courseName" class="java.lang.String"/>
+	<field name="courseCode" class="java.lang.String"/>
+	<field name="subName" class="java.lang.String"/>
+	<field name="subCode" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="112" splitType="Stretch">
+			<image>
+				<reportElement x="5" y="6" width="321" height="68"/>
+				<imageExpression><![CDATA["C:\\Users\\jahrin\\Documents\\NetBeansProjects\\IMS Progress V 6\\web\\IMG\\CaptureNew.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="273" y="27" width="282" height="65"/>
+				<textElement>
+					<font fontName="Calibri" size="30"/>
+				</textElement>
+				<text><![CDATA[Course Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="5" width="100" height="20"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[course Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="5" width="100" height="20"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Subject Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="6" width="100" height="20"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[courseCode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[subCode]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="114" y="7" width="156" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{courseName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="7" width="126" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{subName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{courseCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{subCode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="12" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

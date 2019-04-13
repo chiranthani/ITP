@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * from employee e, salary s where e.userID=s.EID ;]]>
+	</queryString>
+	<field name="userID" class="java.lang.Long"/>
+	<field name="EmpType" class="java.lang.String"/>
+	<field name="year" class="java.lang.Integer"/>
+	<field name="month" class="java.lang.String"/>
+	<field name="EID" class="java.lang.Long"/>
+	<field name="bonus" class="java.lang.Double"/>
+	<field name="deductions" class="java.lang.Double"/>
+	<field name="basic_salary" class="java.lang.Double"/>
+	<field name="no_pay" class="java.lang.Double"/>
+	<field name="net_salary" class="java.lang.Double"/>
+	<field name="gross_salary" class="java.lang.Double"/>
+	<field name="festival" class="java.lang.Double"/>
+	<field name="OT" class="java.lang.Double"/>
+	<field name="balance_sal" class="java.lang.Double"/>
+	<field name="gross_Amt" class="java.lang.Double"/>
+	<field name="EPF" class="java.lang.Double"/>
+	<group name="EID">
+		<groupExpression><![CDATA[$F{EID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<image>
+				<reportElement x="10" y="0" width="364" height="90"/>
+				<imageExpression><![CDATA["C:\\Users\\jahrin\\Documents\\NetBeansProjects\\IMS Progress V 6\\web\\IMG\\CaptureNew.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="374" y="33" width="195" height="45"/>
+				<textElement>
+					<font fontName="Calibri" size="32" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[PAYSHEET]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="569" y="66" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="669" y="66" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="6" width="55" height="20"/>
+				<textElement/>
+				<text><![CDATA[userID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="6" width="69" height="20"/>
+				<textElement/>
+				<text><![CDATA[EmpType]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="6" width="48" height="20"/>
+				<textElement/>
+				<text><![CDATA[bonus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="6" width="76" height="20"/>
+				<textElement/>
+				<text><![CDATA[deductions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="6" width="82" height="20"/>
+				<textElement/>
+				<text><![CDATA[basic_salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="6" width="64" height="20"/>
+				<textElement/>
+				<text><![CDATA[no_pay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="6" width="61" height="20"/>
+				<textElement/>
+				<text><![CDATA[gross_salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="6" width="46" height="20"/>
+				<textElement/>
+				<text><![CDATA[festival]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="496" y="6" width="41" height="20"/>
+				<textElement/>
+				<text><![CDATA[OT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="6" width="51" height="20"/>
+				<textElement/>
+				<text><![CDATA[EPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="586" y="6" width="67" height="20"/>
+				<textElement/>
+				<text><![CDATA[balance_sal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="652" y="6" width="66" height="20"/>
+				<textElement/>
+				<text><![CDATA[gross_Amt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="716" y="6" width="69" height="20"/>
+				<textElement/>
+				<text><![CDATA[net_salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="785" y="6" width="56" height="20"/>
+				<textElement/>
+				<text><![CDATA[Sign]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="55" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{userID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="0" width="69" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EmpType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="1" width="49" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{bonus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="171" y="1" width="76" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{deductions}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="1" width="82" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{basic_salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="1" width="64" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{no_pay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="61" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{gross_salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="1" width="48" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{festival}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="496" y="1" width="41" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{OT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="536" y="0" width="51" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EPF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="585" y="1" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{balance_sal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="654" y="1" width="66" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{gross_Amt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="718" y="1" width="69" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{net_salary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="dd-MMM-yy">
+				<reportElement x="583" y="34" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="702" y="34" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
