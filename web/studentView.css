@@ -1,0 +1,251 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-Sep-2018, 21:28:31
+    Author     : Fasrin
+*/
+
+h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+.tbl-content{
+  height:400px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 14px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+.bck{
+    background: white;
+}
+
+
+/* demo styles */
+
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700); */
+body{
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 40px;
+}
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+
+/* Navigaton css */
+
+
+.dashboard {
+    font-family: Calibri;
+    font-size: 30px;
+    text-align: center;
+}
+
+.headder{
+    overflow: hidden;
+    background-color:#33adff;
+
+    font-family: Arial,Helvetica, sans-serif;
+    word-spacing:8px ; 
+    color:#003d66;
+}
+
+.headder a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+.headder a.active{
+    background-color: dodgerblue;
+    color: white;
+}
+.dropdown{
+    float:left;
+    overflow: hidden;
+}
+.dropdown .dropbtn{
+    font-size: 16px;
+    border: none;
+    outline: white;
+    color: white;
+    padding: 14px 16px;
+    background-color: #33adff;
+    font-family: inherit;
+    margin: 0;
+}
+.headder a:hover, 
+.dropdown:hover .dropbtn{
+    background-color: black;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;  
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: Arial,Helvetica, sans-serif;
+}
+.dropdown-contentSub{
+
+    position: static;  
+    background-color: whitesmoke;
+    min-width: 180px;
+    box-shadow: 10px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+
+    font-family: Arial,Helvetica, sans-serif;
+}
+.dropdown-contentSub a{
+    float : right;
+    color: black;
+    padding: 20px 26px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+.dropdown-content a{
+    float : none;
+    color: black;
+    padding: 12px 26px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover{
+    background-color: darkgrey;
+
+}
+.dropdown-contentSub a:hover{
+    background-color:lightgray;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+    font-family: Arial,Helvetica, sans-serif;
+}
+.dropdown:hover .dropdown-contentSub{
+    display: block;
+    font-family: Arial,Helvetica, sans-serif;
+}
+
+
+a {
+    color:#005c99;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+
+article{
+    background-color:lightgrey;
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+    margin-left: 5px;
+    margin-right:5px
+}
+
+
+input[type=submit] {
+    width: 100%;
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #008ae6;
+}

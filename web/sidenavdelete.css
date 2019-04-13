@@ -1,0 +1,53 @@
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+
+
+/* Style the content */
+.content {
+    
+  
+   
+}
+
+                 
+    .sidenav {
+   
+    width: 200px;
+ 
+    top: 40px;
+    float:left;
+    background-color: #33adff;
+     overflow-x: hidden;
+    padding-top:30px;
+    padding-bottom: 200px;
+  
+   
+}
+
+
+/* Side navigation links */
+.sidenav a {
+    color: white;
+    padding: 16px;
+     content:"";
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+   
+    
+}
+.ul{
+    
+    padding-bottom: 50px;
+}

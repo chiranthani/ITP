@@ -1,0 +1,15 @@
+.registerCard{
+                margin-top: 100px;
+                margin-left: 100px;
+            }
+            .registerBtn{
+                border-radius: 4px;
+                background-color: threedshadow;
+                color:black;
+            }
+           
+            body{
+                background-color: white;
+                font-family: calibri;
+                
+            }
