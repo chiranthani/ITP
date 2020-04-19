@@ -6,6 +6,7 @@ Concepts - Object oriented programming concepts in Java
 Technologies - Java - MySQL - Servlet - Jsp
 
 8 functions in here:
+
         1) Entry requirements & Finance Management
         2) Student & Parent Management
         3) Employee Management & administration
